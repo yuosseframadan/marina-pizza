@@ -262,3 +262,21 @@ pre { margin: 0; white-space: pre-wrap; word-break: break-word; background: var(
   .sheet-b { flex: none; overflow: visible; }
   .toast { bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
 }
+
+
+/* نافذة تثبيت تطبيق مارينا بيتزا */
+.install-overlay { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 18px; background: rgba(15, 8, 8, .76); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); }
+.install-overlay[hidden] { display: none; }
+.install-card { position: relative; width: min(100%, 430px); max-height: min(90dvh, 720px); overflow-y: auto; padding: 30px 24px 22px; border: 1px solid rgba(255,255,255,.13); border-radius: 25px; background: var(--surface, #fff); color: var(--ink, #222); text-align: center; box-shadow: 0 24px 80px rgba(0,0,0,.38); }
+.install-close { position: absolute; top: 12px; inset-inline-start: 12px; width: 38px; height: 38px; border: 1px solid var(--line, #ddd); border-radius: 50%; background: transparent; color: var(--ink, #222); font-size: 25px; line-height: 1; cursor: pointer; }
+.install-logo { display: block; width: 76px; height: 76px; object-fit: cover; border-radius: 20px; margin: 0 auto 12px; box-shadow: 0 7px 22px rgba(0,0,0,.16); }
+.install-kicker { color: var(--price, #a51e28); font-size: .76rem; font-weight: 800; letter-spacing: 3px; }
+.install-card h2 { margin: 8px 0; color: var(--title, #5e0f16); font: 800 1.7rem/1.35 var(--font-display, inherit); }
+.install-card > p { margin: 0 auto 18px; max-width: 330px; color: var(--muted, #666); line-height: 1.8; }
+.install-action { width: 100%; min-height: 52px; justify-content: center; background: var(--red, #5e0f16); color: #fff; border: 0; font-weight: 800; }
+.install-later { display: block; margin: 10px auto 0; min-height: 42px; padding: 6px 18px; border: 0; background: transparent; color: var(--muted, #777); font: 700 .95rem var(--font-body, inherit); cursor: pointer; }
+.install-ios { display: grid; gap: 9px; margin: 18px 0; text-align: right; }
+.install-step { display: flex; align-items: flex-start; gap: 10px; padding: 11px; border-radius: 12px; background: var(--bg, #f7f3f0); line-height: 1.7; }
+.install-step b { flex: 0 0 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; background: var(--red, #5e0f16); color: #fff; }
+.install-help { margin: 12px 0 !important; padding: 10px; border-radius: 10px; background: var(--bg, #f7f3f0); font-size: .9rem; }
+@media (max-width: 420px) { .install-card { padding: 27px 18px 18px; border-radius: 21px; } .install-card h2 { font-size: 1.45rem; } }

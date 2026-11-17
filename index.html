@@ -7,6 +7,11 @@
 <title>مارينا بيتزا</title>
 <meta name="description" content="مارينا بيتزا: فطير مورّق، بيتزا وكريب على مزاجك. اطلب من المنيو وابعت طلبك على واتساب برسالة جاهزة.">
 <link rel="icon" href="assets/logo.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="مارينا بيتزا">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Lalezar&display=swap">
 <link rel="stylesheet" href="css/style.css">
@@ -109,7 +114,27 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<!-- نافذة تثبيت التطبيق: تظهر في المتصفح فقط ولا تظهر داخل التطبيق المثبّت -->
+<div class="install-overlay" id="installPrompt" hidden>
+  <section class="install-card" role="dialog" aria-modal="true" aria-labelledby="installTitle" aria-describedby="installDescription">
+    <button class="install-close" id="installClose" type="button" aria-label="إغلاق">×</button>
+    <img class="install-logo" src="assets/logo.jpg" alt="مارينا بيتزا" width="76" height="76">
+    <span class="install-kicker">MARINA PIZZA</span>
+    <h2 id="installTitle">خلّي مارينا معاك دايمًا 🍕</h2>
+    <p id="installDescription">ثبّت التطبيق على جهازك واطلب بسهولة من غير ما تدور على الموقع كل مرة.</p>
+    <div class="install-ios" id="installIos" hidden>
+      <div class="install-step"><b>1</b><span>اضغط على زر المشاركة <strong>Share</strong> أسفل Safari.</span></div>
+      <div class="install-step"><b>2</b><span>اختار <strong>Add to Home Screen</strong> «إضافة إلى الشاشة الرئيسية».</span></div>
+      <div class="install-step"><b>3</b><span>اضغط <strong>Add</strong> «إضافة»، وبعدها افتح مارينا من الأيقونة.</span></div>
+    </div>
+    <p class="install-help" id="installHelp" hidden></p>
+    <button class="btn install-action" id="installAction" type="button">تثبيت التطبيق</button>
+    <button class="install-later" id="installLater" type="button">مش دلوقتي</button>
+  </section>
+</div>
+
 <script src="js/menu-data.js"></script>
 <script src="js/app.js"></script>
+<script src="js/install.js"></script>
 </body>
 </html>
