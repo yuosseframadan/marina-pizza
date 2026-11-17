@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "مارينا بيتزا",
+  "short_name": "مارينا بيتزا",
+  "description": "فطائر وبيتزا وكريب — اطلب بسهولة من مارينا بيتزا",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffaf6",
+  "theme_color": "#5E0F16",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
