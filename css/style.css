@@ -280,3 +280,22 @@ pre { margin: 0; white-space: pre-wrap; word-break: break-word; background: var(
 .install-step b { flex: 0 0 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; background: var(--red, #5e0f16); color: #fff; }
 .install-help { margin: 12px 0 !important; padding: 10px; border-radius: 10px; background: var(--bg, #f7f3f0); font-size: .9rem; }
 @media (max-width: 420px) { .install-card { padding: 27px 18px 18px; border-radius: 21px; } .install-card h2 { font-size: 1.45rem; } }
+
+
+/* تنبيه يوم الافتتاح وإيقاف استقبال الطلبات مع إبقاء المنيو قابلاً للتصفح */
+.opening-overlay { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; padding: 18px; background: rgba(20, 5, 7, .78); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); }
+.opening-overlay[hidden] { display: none; }
+.opening-card { position: relative; width: min(100%, 430px); padding: 30px 24px 24px; border: 1px solid rgba(255,255,255,.18); border-radius: 26px; background: linear-gradient(155deg, #761923 0%, #4b0c13 100%); color: #fff; text-align: center; box-shadow: 0 25px 90px rgba(0,0,0,.48); }
+.opening-close { position: absolute; top: 12px; inset-inline-start: 12px; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; background: rgba(255,255,255,.08); color: #fff; font: 400 27px/1 var(--font-body); cursor: pointer; }
+.opening-logo { display: block; width: 88px; height: 88px; margin: 0 auto 10px; object-fit: cover; border: 3px solid #fff; border-radius: 50%; }
+.opening-kicker { color: #ffe15b; font-size: .76rem; font-weight: 800; letter-spacing: 3px; }
+.opening-card h2 { margin: 10px 0 4px; color: #ffe15b; font: 800 2rem/1.35 var(--font-display, inherit); }
+.opening-card > p { margin: 0 0 14px; font-size: 1.25rem; font-weight: 800; line-height: 1.7; }
+.opening-note { margin: 0 0 20px; color: #f8e8e9; font-size: .96rem; line-height: 1.9; }
+.opening-ok { width: 100%; min-height: 50px; border: 0; border-radius: 13px; background: #ffe15b; color: #4b0c13; font: 800 1rem var(--font-body); cursor: pointer; }
+/* إخفاء وسائل الطلب وتعطيل أزرار إضافة المنتجات خلال يوم الإغلاق */
+.bar, .numline, .cta, #quickChat, #sendWa, #copyMsg, #orderForm, #preview { display: none !important; }
+.pbtn { pointer-events: none !important; opacity: .48; filter: grayscale(.35); cursor: not-allowed !important; }
+@media (max-width: 420px) { .opening-card { padding: 27px 18px 20px; border-radius: 22px; } .opening-card h2 { font-size: 1.7rem; } .opening-card > p { font-size: 1.12rem; } }
+
+.orders-paused-banner { margin: 18px auto; padding: 13px 16px; max-width: 1100px; border: 1px solid #e7c65a; border-radius: 13px; background: #fff7d6; color: #5e0f16; text-align: center; font-weight: 800; line-height: 1.7; }
