@@ -38,7 +38,6 @@
 </div></div>
 
 <div class="page">
-  <div class="orders-paused-banner" role="status">تنويه: نأسف لكم، لا نستطيع استقبال أوردرات اليوم. يمكنكم تصفح المنيو فقط.</div>
   <main id="menu"></main>
   <footer>تم التصميم بواسطة <a id="designer" href="#" target="_blank" rel="noopener">nexcode</a></footer>
 </div>
@@ -115,19 +114,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<!-- تنبيه يوم الافتتاح: التصفح متاح والطلبات متوقفة مؤقتاً -->
-<div class="opening-overlay" id="openingNotice" role="presentation">
-  <section class="opening-card" role="dialog" aria-modal="true" aria-labelledby="openingTitle" aria-describedby="openingText">
-    <button class="opening-close" id="openingClose" type="button" aria-label="إغلاق الرسالة">×</button>
-    <img src="assets/logo.jpg" alt="مارينا بيتزا" class="opening-logo" width="88" height="88">
-    <span class="opening-kicker">MARINA PIZZA</span>
-    <h2 id="openingTitle">نأسف لكم ❤️</h2>
-    <p id="openingText">لا نستطيع استقبال أوردرات اليوم</p>
-    <div class="opening-note">تقدر تتصفح المنيو وتشوف كل المنتجات والأسعار، ونستقبل طلباتكم في أقرب وقت.</div>
-    <button class="opening-ok" id="openingOk" type="button">تصفح المنيو</button>
-  </section>
-</div>
-
 <!-- نافذة تثبيت التطبيق: تظهر في المتصفح فقط ولا تظهر داخل التطبيق المثبّت -->
 <div class="install-overlay" id="installPrompt" hidden>
   <section class="install-card" role="dialog" aria-modal="true" aria-labelledby="installTitle" aria-describedby="installDescription">
@@ -150,6 +136,5 @@
 <script src="js/menu-data.js"></script>
 <script src="js/app.js"></script>
 <script src="js/install.js"></script>
-<script src="js/opening-notice.js"></script>
 </body>
 </html>
