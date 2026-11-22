@@ -1,8 +1,8 @@
 /* Basic offline shell for Marina Pizza PWA */
-var CACHE_NAME = 'marina-pizza-shell-v2';
+var CACHE_NAME = 'marina-pizza-shell-v1';
 var CORE_FILES = [
   './', './index.html', './manifest.webmanifest',
-  './css/style.css', './js/menu-data.js', './js/app.js', './js/install.js', './js/opening-notice.js',
+  './css/style.css', './js/menu-data.js', './js/app.js', './js/install.js',
   './assets/logo.jpg', './assets/hero.jpg', './assets/chef.jpg', './assets/fatir.jpg'
 ];
 self.addEventListener('install', function (event) {
